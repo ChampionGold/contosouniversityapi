@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "426c8bdc-fab6-4a82-ae61-a7e53f397a19",
+		"name": "ContosoAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Any",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/students",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Get any student"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/students/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 1,\r\n        \"lastName\": \"Luna\",\r\n        \"firstName\": \"Paula\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44317/api/students/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				},
+				"description": "Update Student"
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"lastName\": \"Snake\",\r\n        \"firstName\": \"Solid\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44317/api/students",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"students"
+					]
+				},
+				"description": "Creating a student"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44317/api/students/14",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44317",
+					"path": [
+						"api",
+						"students",
+						"14"
+					]
+				},
+				"description": "Delet this"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
